@@ -1,7 +1,7 @@
 import Slider from './Slider.js'
 import { uiFeatures } from './utils.js'
 
-const { spinLeafs, setBackgroundColor, toggleDarkTheme, renderProductSummary } = uiFeatures
+const { spinLeafs, setBackgroundColor, toggleDarkTheme } = uiFeatures
 
 class ProductSlider extends Slider {
   constructor(data) {

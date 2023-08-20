@@ -1,6 +1,6 @@
 import products from '../data/products.js'
 import ProductSlider from './ProductSlider.js'
-import { uiFeatures, IntervalTimer } from './utils.js'
+import { IntervalTimer } from './utils.js'
 
 const AUTO_SLIDE_TIMEOUT = 5000
 const SECTION_TRANSITION_DURATION_S = 2
