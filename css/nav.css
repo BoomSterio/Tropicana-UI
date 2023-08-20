@@ -1,0 +1,82 @@
+.nav {
+  display: flex;
+  height: auto;
+  width: 100%;
+  z-index: 3;
+  padding: 0rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .logo {
+  width: 150px;
+  height: 86px;
+
+}
+
+.nav .logo path {
+  fill: var(--black);
+  transition: 1s ease;
+}
+
+.dark .nav .logo path {
+  fill: #fff;
+}
+
+.navmiddle {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.8s ease;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  cursor: pointer;
+}
+
+.navmiddle a {
+  border-radius: 6px;
+  transition: box-shadow 0.1s ease;
+}
+
+.navmiddle a:hover {
+  box-shadow: inset 0px 0px 2px 200px rgba(255, 255, 255, 0.2), 0px 0px 12px 3px rgba(255, 255, 255, 0.3);
+}
+
+.navmiddle > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav .shopCart {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
+.nav .shopCart g path {
+  transition: all 0.8s ease;
+  stroke: var(--black);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dark .nav .shopCart g path {
+  stroke: #fff;
+}
+
+.nav .shopCart:hover g path {
+  stroke: #fff;
+}
+
+.dark .nav .shopCart:hover g path {
+  stroke: var(--black);
+}
+
+@media screen and (max-width: 793px) {
+  .navmiddle {
+    display: none;
+  }
+}

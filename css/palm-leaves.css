@@ -1,0 +1,36 @@
+.palmLeavesSection {
+  height: var(--palmSectionHeight);
+}
+
+.palmleaves {
+  position: relative;
+  width: 100%;
+  right:0;
+  height: 100%;
+}
+
+.palmleaves .leaf {
+  position: absolute;
+}
+
+.palmleaves .leaf:nth-child(1) {
+  top: -3rem;
+  left: -1rem;
+  width: 50vw;
+  max-width: 768px;
+  filter: blur(2px);
+}
+
+.palmleaves .leaf:nth-child(2) {
+  top: -4rem;
+  right: -1rem;
+  width: 58vw;
+  max-width: 900px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 889px) {
+  .palmleaves .leaf {
+    scale: 1.2;
+  }
+}

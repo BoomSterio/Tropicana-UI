@@ -1,0 +1,232 @@
+.sliderSection {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  flex-shrink: 0;
+  overflow-y: visible;
+}
+
+.slide > img {
+  height: 500px;
+  position: absolute;
+  z-index: 2;
+}
+
+.slide > img.imgMain {
+}
+
+.slide > img.imgTop {
+  height: 30%;
+  top: 5rem;
+  padding-right: 2rem;
+  z-index: 1;
+  rotate: 20deg;
+  transition: 1s ease;
+}
+.slide.activeSlide > img.imgTop {
+  rotate: 0deg;
+  padding-right: 15rem;
+}
+
+.slide > img.imgBottom {
+  height: 40%;
+  bottom: 0rem;
+  padding-left: 2rem;
+  z-index: 5;
+  scale: 0.5;
+  transition: 1s ease;
+}
+
+.slide.activeSlide > img.imgBottom {
+  padding-left: 20vw;
+  scale: 1;
+}
+
+.slide > h1 {
+  margin: 0;
+  margin-top: -19rem;
+  color: white;
+  font-size: 25vw;
+  font-weight: 900;
+  transition: font-size 1s ease;
+}
+
+.leafoverlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+}
+
+.leafoverlay > div {
+  height: 100%;
+  position: relative;
+}
+
+.leafoverlay .leaf {
+  position: absolute;
+}
+
+.sliderleaves .leaf:nth-child(1) {
+  transform: rotate(230deg);
+  bottom: -4rem;
+  right: -4rem;
+  width: 15rem;
+  z-index: 3;
+}
+
+.sliderleaves .leaf:nth-child(2) {
+  transform: rotate(300deg);
+  bottom: -4rem;
+  left: -6rem;
+  width: 25rem;
+  filter: blur(1px);
+  z-index: 3;
+}
+
+.sliderleaves .leaf:nth-child(3) {
+  transform: rotate(130deg);
+  bottom: 57%;
+  right: -3rem;
+  width: 13rem;
+  filter: blur(2px);
+}
+
+.sliderleaves .leaf:nth-child(4) {
+  transform: rotate(34deg);
+  bottom: 70%;
+  left: 4rem;
+  width: 9rem;
+  filter: blur(2px);
+}
+
+.selectSlideFrame {
+  z-index: 10;
+  height: 100px;
+  position: absolute;
+  top: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.selectSlide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.selector {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.selector:hover {
+  transform: scale(1.2);
+}
+.selectSlide > span {
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff82;
+  border-radius: 50%;
+}
+.selectSlide > span.isactive {
+  background-color: #fff;
+}
+
+.productOverlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 86px);
+  margin-top: 86px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productOverlay .productOverlayImg {
+  height: 500px;
+}
+
+@media screen and (max-width: 1366px) {
+  .slide > h1 {
+    font-size: 20vw;
+  }
+
+  .slide .imgMain {
+    height: 380px;
+  }
+  .productOverlay .productOverlayImg {
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 889px) {
+  .slide > h1 {
+    font-size: 25vw;
+  }
+  .slide.activeSlide > img.imgBottom {
+    padding-left: 40vw;
+    scale: 0.8;
+  }
+
+  .sliderleaves .leaf {
+    scale: 0.5;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .activeSlide > h1 {
+    font-size: 30vw;
+  }
+  .slide:nth-child(2).activeSlide > h1 {
+    font-size: 25vw;
+  }
+  .slide.activeSlide > img.imgBottom {
+    padding-left: 50vw;
+    scale: 0.75;
+  }
+  .slide > img.imgTop {
+    scale: 0.8;
+  }
+
+  .sliderleaves .leaf {
+    scale: 0.4;
+  }
+  .sliderleaves .leaf:nth-child(2) {
+    left: -7rem;
+    bottom: -9.5rem;
+    z-index: 1;
+  }
+  .sliderleaves .leaf:nth-child(1) {
+    z-index: 1;
+  }
+}

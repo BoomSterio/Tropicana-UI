@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Passion One');
+@import url('./nav.css');
+@import url('./slider.css');
+@import url('./palm-leaves.css');
+@import url('./summary.css');
+@import url('./assortment.css');
+
+:root {
+  --orange: #f7be00;
+  --pina: #ffe386;
+  --mango: #db8976;
+  --green: #007c3c;
+  --black: rgb(15 23 42);
+
+  --palmSectionHeight: 450px;
+
+  --summaryOffsetX: -320px;
+  --summaryRotate: 15deg
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Passion One' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  color: var(--black);
+  background-color: var(--orange);
+  transition: background-color 1s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.dark {
+  color: #fff;
+  stroke: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.leaf {
+  transition: transform 1s ease;
+}
+
+button.primary {
+  border: 2px solid var(--green);
+  color: var(--green);
+  background-color: transparent;
+  height: 36px;
+  padding: 24px 0;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+button.primary:hover {
+  background-color: #fff;
+}
+
+.addToCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--green);
+  width: 132px;
+  height: 36px;
+  padding-right: 24px;
+  border-radius: 9999px;
+  position: relative;
+  font-family: 'Passion One' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dark .addToCart {
+  background-color: gold;
+}
+
+.addToCart div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  background-color: var(--green);
+  border-radius: 9999px;
+  height: 32px;
+  width: 32px;
+  transition: 0.2s ease;
+}
+
+.addToCart:hover div {
+  width: calc(100% - 4px);
+}
+
+.addToCart div .shopCart {
+  width: 20px;
+  height: 20px;
+}
+
+.addToCart div .shopCart path {
+  stroke: #fff;
+}
+
+.dark .addToCart div .shopCart path {
+  stroke: gold;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--pina);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.loader > img {
+  animation: spin 4s linear infinite;
+}
+
+@media screen and (max-width: 889px) {
+  :root {
+    --summaryOffsetX: 0;
+    --summaryRotate: 0deg;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveToSlider {
+  0% {
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes moveToSummary {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+  }
+}
+
+@keyframes moveToAssortment {
+  0% {
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+  }
+  100% {
+    transform: translate(0px, calc(50vh + 1020px + var(--palmSectionHeight))) rotate(0deg);
+    height: 300px;
+  }
+}
