@@ -40,7 +40,7 @@ class ProductSlider extends Slider {
     toggleDarkTheme(product.isTextDark)
     setBackgroundColor(product.color)
     spinLeafs()
-  }  
+  }
 }
 
 export default ProductSlider

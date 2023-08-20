@@ -15,7 +15,7 @@
   --palmSectionHeight: 450px;
 
   --summaryOffsetX: -320px;
-  --summaryRotate: 15deg
+  --summaryRotate: 15deg;
 }
 
 * {
@@ -43,7 +43,12 @@ body {
   transition: background-color 1s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
 }
 
@@ -163,7 +168,8 @@ button.primary:hover {
 
 @keyframes moveToSlider {
   0% {
-    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight)))
+      rotate(var(--summaryRotate));
   }
   100% {
     transform: none;
@@ -175,13 +181,15 @@ button.primary:hover {
     transform: none;
   }
   100% {
-    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight)))
+      rotate(var(--summaryRotate));
   }
 }
 
 @keyframes moveToAssortment {
   0% {
-    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight))) rotate(var(--summaryRotate));
+    transform: translate(var(--summaryOffsetX), calc(50vh + 150px + var(--palmSectionHeight)))
+      rotate(var(--summaryRotate));
   }
   100% {
     transform: translate(0px, calc(50vh + 1020px + var(--palmSectionHeight))) rotate(0deg);

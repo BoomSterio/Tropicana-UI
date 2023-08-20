@@ -26,7 +26,7 @@ class Slider {
   getActiveSlide = () => {
     return this.slides[this.currentIndex]
   }
-  
+
   /** Sets current slide and scrolls to it */
   setActiveSlideIndex = (index) => {
     this.currentIndex = index

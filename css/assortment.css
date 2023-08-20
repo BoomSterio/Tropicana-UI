@@ -41,10 +41,10 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-} 
+}
 
 .assortmentSection .item h4 {
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .assortmentSection .circle {
@@ -59,13 +59,13 @@
 .assortmentSection .assortmentImg {
   position: absolute;
   scale: 0.6;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
   transform: translate(0, -228px);
   height: 500px;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 }
 
 .assortmentSection .assortmentImg:hover {
