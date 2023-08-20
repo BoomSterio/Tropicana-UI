@@ -1,8 +1,6 @@
 import HomePage from './src/HomePage.js'
 import { uiFeatures } from './src/utils.js'
-import smoothscroll from './src/scroll-polyfill.js'
-
-smoothscroll.polyfill();
+import './src/scroll-polyfill.js'
 
 const homePage = new HomePage()
 homePage.init()
